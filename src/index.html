@@ -1,288 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
-    <title>Petcare</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="icon"
-      href="./img/focusconsultingmedia_logo.jpg"
-      type="image/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <style>
-      .img {
-        background-image: url(./img/1st.png);
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>PetCare</title>
+  <link rel="icon" type="x-icon" href="./assets/logo.png">
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+  <style>
+    .img{
+        background-image: url(./assets/img2.png);
         background-repeat: no-repeat;
         background-attachment: scroll;
-        background-size: 100%;
-      }
-      .imgt2 {
-        background-image: url(./img/p6.png);
+        background-size: cover;
+    }
+    .img2{
+        background-image: url(./assets/img3.png);
         background-repeat: no-repeat;
         background-attachment: scroll;
-        background-size: 100%;
-      }
-    </style>
-  </head>
-  <body class="bg-black">
-    <section id="navigation " class="img">
-      <div
-        class="container mx-auto flex justify-between items-center px-4 py-2"
-      >
-        <div>
-          <a class="flex md:mb-0">
-            <img src="./img/p1.png" alt="logo" class="w-16" />
-          </a>
-        </div>
-        <div>
-          <nav class="hidden space-x-4 sm:flex">
-            <a
-              href="#"
-              class="text-white hover:text-gray-800 font-medium px-3 py-2 rounded-md"
-              >Home</a
-            >
-            <a
-              href="#"
-              class="text-white hover:text-gray-800 font-medium px-3 py-2 rounded-md"
-              >Products</a
-            >
-            <a
-              href="#"
-              class="text-white hover:text-gray-800 font-medium px-3 py-2 rounded-md"
-              >Promo</a
-            >
-            <a
-              href="#"
-              class="text-white hover:text-gray-800 font-medium px-3 py-2 rounded-md"
-              >About</a
-            >
-            <a
-              href="#"
-              class="text-white hover:text-gray-800 font-medium px-3 py-2 rounded-md"
-              >Contact</a
-            >
-            <button class="inline-flex items-center py-1 px-3 mt-4 md:mt-0">
-              <i
-                class="fa-solid fa-magnifying-glass"
-                style="color: #ffffff"
-              ></i>
+        background-size: cover;
+    }
+    .img3{
+        background-image: url(./assets/img4.png);
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+  </style>
+</head>
+<body>
+    <section id="nav" class="bg-[#2d78b7]/85 fixed w-full z-[100]">
+        <div class="container mx-auto flex justify-between items-center px-6 py-3">
+            <img class="w-14 lg:w-20" src="./assets/logo.png" alt="">
+            <div class="space-x-6 hidden lg:block text-white font-semibold text-xl">
+                <span>Home</span>
+                <span>Product</span>
+                <span>Promo</span>
+                <span>About</span>
+                <span>Contact</span>
+            </div>
+            <button class="block lg:hidden" onclick="buttonClick()">
+                <span class="material-symbols-outlined" id="dropdownButton"> menu </span>
             </button>
-          </nav>
         </div>
-      </div>
-      <section id="hero" class="py-0 md:py-44">
-        <div class="text-sm md:text-7xl text-white text-center font-bold">
-          We Care About Your Pet
-        </div>
-        <div class=" text-white w-2/5 text-center mx-auto md:py-12">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in
-          purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus,
-          malesuada eu massa convallis, blandit euismod lacus.
-        </div>
-        <div class="text-center">
-          <button
-            class="text-white text-2xl text-center bg-[#FBC302] py-2 px-14 rounded-full"
-          >
-            Order Now
-          </button>
-        </div>
-      </section>
     </section>
+    <section id="hero" class="relative">
+        <div id="dropdownItem" class="hidden flex-wrap place-content-center absolute top-14 w-full py-1 bg-transparent">
+            <ul class="space-y-1 bg-blue-600 w-full text-center text-xl font-semibold text-white">
+                <li class="py-1 bg-teal-500">
+                    <a href="#">Home</a>
+                </li>
+                <li class="py-1 bg-teal-500">
+                    <a href="#">Product</a>
+                </li>
+                <li class="py-1 bg-teal-500">
+                    <a href="#">Promo</a>
+                </li>
+                <li class="py-1 bg-teal-500">
+                    <a href="#">About</a>
+                </li>
+                <li class="py-1 bg-teal-500">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <section id="top-hero" class="bg-blue-400 img lg:min-h-screen flex items-center place-content-center">
+            <section id="hero" class="py-16 lg:py-52 flex lg:block flex-wrap items-center justify-center">
+                <div class="text-4xl lg:text-7xl text-white text-center font-bold">We Care About Your Pet</div>
+                <div class="text-white w-11/12 lg:w-2/5 text-center mx-auto py-7 lg:py-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus, malesuada eu massa convallis.</div>
+                <div class="text-center"><button class="text-white font-semibold text-xl lg:text-2xl text-center bg-[#FBC302] py-2 px-14 rounded-full">Order Now</button></div>
+            </section>
+        </section>
+    </section>
+    <script>
+        let buttonClickOrNot = false;
+        function buttonClick() {
+          if (!buttonClickOrNot) {
+            document
+              .getElementById("dropdownItem")
+              .classList.replace("hidden", "flex");
+            buttonClickOrNot = true;
+            document.getElementById("dropdownButton").innerHTML = "close";
+          } else {
+            document
+              .getElementById("dropdownItem")
+              .classList.replace("flex", "hidden");
+            buttonClickOrNot = false;
+            document.getElementById("dropdownButton").innerHTML = "menu";
+          }
+        }
+      </script>
     <section id="title" class="bg-[#5B9FE6] relative">
-      <img
-        class="z-20 absolute w-12 top-16 left-16"
-        src="./img/ic 3.png"
-        alt=""
-      />
-      <img
-        class="z-20 absolute w-12 top-16 right-16"
-        src="./img/ic 4.png"
-        alt=""
-      />
-      <img
-        class="z-20 absolute w-12 bottom-0 right-16"
-        src="./img/ic 3.png"
-        alt=""
-      />
-      <img
-        class="-z-8 absolute w-3/12 top-0 left-0"
-        src="./img/ic 5.png"
-        alt=""
-      />
-      <img
-        class="-z-8 absolute w-3/12 top-0-0 right-0"
-        src="./img/ic6.png"
-        alt=""
-      />
-      <div class="container m-auto py-12">
-        <div class="text-white text-center text-5xl font-bold">Title Here</div>
-        <div class="text-white w-2/5 text-center mx-auto py-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in
-          purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus,
-          malesuada eu massa convallis, blandit euismod lacus.
+        <img class="z-20 absolute w-12 top-6 left-4 lg:top-16 lg:left-16" src="./assets/ic 3.png" alt="">
+        <img class="z-20 absolute w-12 top-6 lg:top-16 right-6 lg:right-16" src="./assets/ic 4.png" alt="">
+        <img class="z-20 absolute w-12 bottom-0 right-6 lg:right-16" src="./assets/ic 3.png" alt="">
+        <img class="-z-8 absolute w-3/12 top-0 left-0" src="./assets/ic 5.png" alt="">
+        <img class="-z-8 absolute w-3/12 top-0 right-0" src="./assets/ic6.png" alt="">
+        <div class="container m-auto py-8 lg:py-12">
+            <div class="text-white text-center text-3xl lg:text-5xl font-bold">Title Here</div>
+            <div class="text-white w-11/12 lg:w-2/5 text-center mx-auto py-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus, malesuada eu massa convallis.</div>
         </div>
-      </div>
-      <div
-        class="container mx-auto pb-16 w-10/12 grid grid-cols-3 gap-40 justify-center items-center"
-      >
-        <div class="z-40">
-          <img class="rounded-full mx-auto" src="./img/p2.2.png" alt="" />
-          <div class="text-white text-center text-4xl py-5 font-bold">
-            Pet Care
-          </div>
-          <div class="text-white text-center text-xl">
-            Lorem ipsum dolor sit amet,<br />
-            consectetur adipiscing elit.
-          </div>
+        <div class="container mx-auto pb-16 w-full lg:w-10/12 block lg:grid grid-cols-3 gap-40 justify-center items-center">
+            <div class="z-40 pb-8 lg:pb-0">
+                <img class="rounded-full mx-auto w-48 lg:w-full" src="./assets/2nd.png" alt="">
+                <div class="text-white text-center text-4xl py-5 font-bold">Pet Care</div>
+                <div class="text-white text-center text-xl">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</div>
+            </div>
+            <div class="z-40 pb-8 lg:pb-0">
+                <img class="rounded-full mx-auto w-48 lg:w-full" src="./assets/3rd.png" alt="">
+                <div class="text-white text-center text-4xl py-5 font-bold">Pet Shop</div>
+                <div class="text-white text-center text-xl">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</div>
+            </div>
+            <div class="z-40 pb-0 lg:pb-0">
+                <img class="rounded-full mx-auto w-48 lg:w-full" src="./assets/4th.png" alt="">
+                <div class="text-white text-center text-4xl py-5 font-bold">Pet Help</div>
+                <div class="text-white text-center text-xl">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</div>
+            </div>
         </div>
-        <div class="z-40">
-          <img class="rounded-full mx-auto" src="./img/p3.1.png" alt="" />
-          <div class="text-white text-center text-4xl py-5 font-bold">
-            Pet Shop
-          </div>
-          <div class="text-white text-center text-xl">
-            Lorem ipsum dolor sit amet,<br />
-            consectetur adipiscing elit.
-          </div>
-        </div>
-        <div class="z-40">
-          <img class="rounded-full mx-auto" src="./img/p4.1.png" alt="" />
-          <div class="text-white text-center text-4xl py-5 font-bold">
-            Pet Help
-          </div>
-          <div class="text-white text-center text-xl">
-            Lorem ipsum dolor sit amet,<br />
-            consectetur adipiscing elit.
-          </div>
-        </div>
-      </div>
     </section>
-    <section id="t2" class="imgt2">
-      <section class="py-10">
-        <div class="container m-auto py-12">
-          <div class="text-white text-center text-5xl font-bold">
-            Title Here
-          </div>
-          <div class="text-white w-2/5 text-center mx-auto py-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in
-            purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus,
-            malesuada eu massa convallis, blandit euismod lacus.
-          </div>
-        </div>
-        <div
-          class="container mx-auto pb-16 w-8/12 grid grid-cols-1 md:grid-cols-3 gap-40 justify-center items-center"
-        >
-          <div class="rounded-full border-4 border-white p-16">
-            <div class="text-white text-center text-4xl py-5 font-bold">
-              3.5K
+    <section id="t2" class="bg-yellow-500 img2 lg:min-h-screen">
+        <section class="py-10">
+            <div class="container m-auto py-2 lg:py-12">
+                <div class="text-white text-center text-4xl lg:text-6xl font-bold">Title Here</div>
+                <div class="text-white w-11/12 lg:w-2/5 text-center mx-auto py-3 lg:py-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus, malesuada eu massa convallis.</div>
             </div>
-            <div class="text-white text-center text-xl">Pet Care</div>
-          </div>
-          <div class="rounded-full border-4 border-white p-16">
-            <div class="text-white text-center text-4xl py-5 font-bold">
-              900
+            <div class="container pb-0 lg:pb-16 flex gap-2 lg:gap-40 justify-center items-center mx-auto">
+                <div class="rounded-full border-4 border-white w-32 h-32 lg:w-52 lg:h-52 text-center items-center flex justify-center">
+                    <div class="text-white text-center text-lg lg:text-4xl font-bold">3.5K <br>Pet Care</div>
+                </div>
+                <div class="rounded-full border-4 border-white w-32 h-32 lg:w-52 lg:h-52 text-center items-center flex justify-center">
+                    <div class="text-white text-center text-lg lg:text-4xl font-bold">900 <br>outlet</div>
+                </div>
+                <div class="rounded-full border-4 border-white w-32 h-32 lg:w-52 lg:h-52 text-center flex justify-center items-center">
+                    <div class="text-white text-center text-lg lg:text-3xl font-bold">2K+ <br>Pet Helping</div>
+                </div>
             </div>
-            <div class="text-white text-center text-xl">outlet</div>
-          </div>
-          <div class="rounded-full border-4 border-white p-16">
-            <div class="text-white text-center text-4xl py-5 font-bold">
-              2K+
-            </div>
-            <div class="text-white text-center text-md">Pet Helping</div>
-          </div>
-        </div>
-      </section>
+        </section>
     </section>
     <section id="pre" class="bg-[#2d78b7] py-16">
-      <div
-        class="container mx-auto grid grid-cols-3 gap-20 w-10/12 justify-center items-center"
-      >
-        <div class="bg-white rounded-md p-4">
-          <div class="text-[#5B9FE6] text-center text-2xl font-bold">
-            Premium
-          </div>
-          <img
-            class="text-blue-600 bg-blue-700 my-8 mx-auto rounded-2xl"
-            src="./img/ic.png"
-            alt=""
-          />
-          <div class="text-[#5B9FE6] text-center text-2xl py-3 font-bold">
-            $19.50
-          </div>
-          <div class="text-[#5B9FE6] text-center text-xl pb-3">
-            Lorem ipsum dolor sit amet,<br />
-            consectetur adipiscing elit.
-          </div>
-          <div class="text-center py-2">
-            <button
-              class="text-white text-2xl text-center bg-[#FBC302] py-2 px-16 rounded-full"
-            >
-              Order Now
-            </button>
-          </div>
+        <div class="container mx-auto block lg:grid grid-cols-3 gap-16 w-9/12 justify-center items-center">
+            <div class="bg-white rounded-md p-4 mb-3 lg:mb-0">
+                <div class="text-[#5B9FE6] text-center text-2xl font-bold">Premium</div>
+                <img class="text-blue-600 bg-blue-700 my-8 mx-auto rounded-2xl" src="./assets/ic.png" alt="">
+                <div class="text-[#5B9FE6] text-center text-2xl py-3 font-bold">$19.50</div>
+                <div class="text-[#5B9FE6] text-center text-xl pb-3">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</div>
+                <div class="text-center py-2"><button class="text-white text-lg lg:text-2xl text-center bg-[#FBC302] py-2 px-6 lg:px-16 rounded-full">Order Now</button></div>
+            </div>
+            <div class="bg-white rounded-md p-4 mb-3 lg:mb-0">
+                <div class="text-[#5B9FE6] text-center text-2xl font-bold">Premium</div>
+                <img class="text-blue-600 bg-blue-700 my-8 mx-auto rounded-2xl" src="./assets/ic.png" alt="">
+                <div class="text-[#5B9FE6] text-center text-2xl py-3 font-bold">$19.50</div>
+                <div class="text-[#5B9FE6] text-center text-xl pb-3">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</div>
+                <div class="text-center py-2"><button class="text-white text-lg lg:text-2xl text-center bg-[#FBC302] py-2 px-6 lg:px-16 rounded-full">Order Now</button></div>
+            </div>
+            <div class="bg-white rounded-md p-4">
+                <div class="text-[#5B9FE6] text-center text-2xl font-bold">Premium</div>
+                <img class="text-blue-600 bg-blue-700 my-8 mx-auto rounded-2xl" src="./assets/ic.png" alt="">
+                <div class="text-[#5B9FE6] text-center text-2xl py-3 font-bold">$19.50</div>
+                <div class="text-[#5B9FE6] text-center text-xl pb-3">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</div>
+                <div class="text-center py-2"><button class="text-white text-lg lg:text-2xl text-center bg-[#FBC302] py-2 px-6 lg:px-16 rounded-full">Order Now</button></div>
+            </div>
         </div>
-        <div class="bg-white rounded-md p-4">
-          <div class="text-[#5B9FE6] text-center text-2xl font-bold">
-            Premium
-          </div>
-          <img
-            class="text-blue-600 bg-blue-700 my-8 mx-auto rounded-2xl"
-            src="./img/ic.png"
-            alt=""
-          />
-          <div class="text-[#5B9FE6] text-center text-2xl py-3 font-bold">
-            $19.50
-          </div>
-          <div class="text-[#5B9FE6] text-center text-xl pb-3">
-            Lorem ipsum dolor sit amet,<br />
-            consectetur adipiscing elit.
-          </div>
-          <div class="text-center py-2">
-            <button
-              class="text-white text-2xl text-center bg-[#FBC302] py-2 px-16 rounded-full"
-            >
-              Order Now
-            </button>
-          </div>
-        </div>
-        <div class="bg-white rounded-md p-4">
-          <div class="text-[#5B9FE6] text-center text-2xl font-bold">
-            Premium
-          </div>
-          <img
-            class="text-blue-600 bg-blue-700 my-8 mx-auto rounded-2xl"
-            src="./img/ic.png"
-            alt=""
-          />
-          <div class="text-[#5B9FE6] text-center text-2xl py-3 font-bold">
-            $19.50
-          </div>
-          <div class="text-[#5B9FE6] text-center text-xl pb-3">
-            Lorem ipsum dolor sit amet,<br />
-            consectetur adipiscing elit.
-          </div>
-          <div class="text-center py-2">
-            <button
-              class="text-white text-2xl text-center bg-[#FBC302] py-2 px-16 rounded-full"
-            >
-              Order Now
-            </button>
-          </div>
-        </div>
-      </div>
     </section>
-  </body>
+    <section id="title3" class="bg-[#5B9FE6]">
+        <div class="container mx-auto py-10 lg:py-20 relative">
+            <img class="absolute w-9 top-8 right-3 lg:top-16 lg:right-0 lg:w-12" src="./assets/ic 4.png" alt="">
+            <img class="absolute w-9 bottom-4 left-2 lg:bottom-6 lg:left-0 lg:w-12" src="./assets/ic 4.png" alt="">
+            <img class="" src="" alt="">
+            <div class="text-white text-center text-4xl lg:text-6xl font-bold">Title Here</div>
+            <div class="text-white w-11/12 lg:w-2/5 text-center mx-auto py-3 lg:py-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus, malesuada eu massa convallis.</div>
+            <div class="container mx-auto block lg:grid grid-cols-2 gap-20 w-11/12 lg:w-8/12 justify-center items-center text-white">
+                <div id="col1" class="">
+                    <div class="flex items-center gap-8 py-5">
+                        <img class="w-9 lg:w-16" src="./assets/ic.png" alt="">
+                        <div>
+                            <div class="font-bold text-2xl py-2">Lorem ipsum</div>
+                            <div class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus, malesuada eu massa convallis.</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-8 py-5">
+                        <img class="w-9 lg:w-16" src="./assets/ic.png" alt="">
+                        <div>
+                            <div class="font-bold text-2xl py-2">Lorem ipsum</div>
+                            <div class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus, malesuada eu massa convallis.</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="col2" class="">
+                    <div class="flex items-center gap-8 py-5">
+                        <img class="w-9 lg:w-16" src="./assets/ic.png" alt="">
+                        <div>
+                            <div class="font-bold text-2xl py-2">Lorem ipsum</div>
+                            <div class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus, malesuada eu massa convallis.</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-8 py-5">
+                        <img class="w-9 lg:w-16" src="./assets/ic.png" alt="">
+                        <div>
+                            <div class="font-bold text-2xl py-2">Lorem ipsum</div>
+                            <div class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus, malesuada eu massa convallis.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="drjenny" class="bg-yellow-500 img3 lg:min-h-screen">
+        <div class="py-5 lg:py-72">
+            <div class="container mx-auto">
+                <div class="text-white w-11/12 lg:w-3/5 text-center text-3xl mx-auto pb-6 lg:pb-0 py-0 lg:py-6 text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus, malesuada eu massa convallis.</div>
+                <div class="text-white font-bold text-4xl text-center">Dr. Jenny</div>
+            </div>
+        </div>
+    </section>
+    <section id="bottom" class="bg-[#313131] text-white text-center lg:text-left">
+        <div class="container mx-auto w-11/12 gap-[3%] block lg:flex justify-center py-6">
+            <div class="w-full lg:w-[40%] pr-0 lg:pr-12 pb-5 lg:pb-0">
+                <div class="font-bold text-2xl py-2">Lorem ipsum</div>
+                <div class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in purus vitae ligula lacinia luctus sit amet a est. Etiam ipsum metus, malesuada eu massa convallis.</div>
+                <div class="flex justify-center lg:justify-start items-center gap-3 py-4">
+                    <img class="w-6" src="./assets/f.png" alt="">
+                    <img class="w-6" src="./assets/i.png" alt="">
+                    <img class="w-6" src="./assets/t.png" alt="">
+                    <img class="w-6" src="./assets/w.png" alt="">
+                </div>
+            </div>
+            <div class="w-full lg:w-[20%] pb-5 lg:pb-0">
+                <div class="font-bold text-2xl py-2">About</div>
+                <div class="">History</div>
+                <div class="">Our Term</div>
+                <div class="">Brand Guidelines</div>
+                <div class="">Trems & Conditions</div>
+                <div class="">Privacy Policy</div>
+            </div>
+            <div class="w-full lg:w-[20%] pb-5 lg:pb-0">
+                <div class="font-bold text-2xl py-2">services</div>
+                <div>How ro Order</div>
+                <div>Our Products</div>
+                <div>Order Status</div>
+                <div>Promo</div>
+                <div>Payment Method</div>
+            </div>
+            <div class="w-full lg:w-[11%] pb-5 lg:pb-0">
+                <div class="font-bold text-2xl py-2">Other</div>
+                <div>Contact us</div>
+                <div>Help</div>
+                <div>Privacy</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</body>
 </html>
+
+
+
+
+<!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
